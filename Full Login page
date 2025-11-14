@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Login – StudentFix Lab</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background: #f3f4f6;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+    }
+    .box {
+      width: 350px;
+      background: #fff;
+      padding: 30px;
+      border-radius: 12px;
+      box-shadow: 0 0 15px rgba(0,0,0,0.1);
+    }
+    h2 {
+      text-align: center;
+      margin-bottom: 25px;
+    }
+    input {
+      width: 100%;
+      padding: 12px;
+      margin: 8px 0;
+      border: 1px solid #ddd;
+      border-radius: 8px;
+    }
+    button {
+      width: 100%;
+      padding: 12px;
+      background: #2563eb;
+      border: none;
+      color: white;
+      border-radius: 8px;
+      font-size: 16px;
+      cursor: pointer;
+      margin-top: 10px;
+    }
+    button:hover { background: #1e40af; }
+    .link {
+      text-align: center;
+      margin-top: 10px;
+    }
+    a { color: #2563eb; text-decoration: none; }
+  </style>
+</head>
+<body>
+
+<div class="box">
+  <h2>Login</h2>
+
+  <input type="email" id="email" placeholder="Email Address">
+  <input type="password" id="pass" placeholder="Password">
+
+  <button onclick="login()">Login</button>
+
+  <div class="link">
+    New user? <a href="signup.html">Create Account</a>
+  </div>
+</div>
+
+<script>
+function login() {
+  let email = document.getElementById("email").value;
+  let pass  = document.getElementById("pass").value;
+
+  if(email=="" || pass=="") {
+    alert("Please fill all fields");
+    return;
+  }
+
+  alert("Login Successful!");
+}
+</script>
+
+</body>
+</html>
